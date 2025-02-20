@@ -1,0 +1,52 @@
+nav {
+    background-color: #004F98; /* Color de fondo azul */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos del menú uniformemente */
+}
+
+nav li {
+    position: relative; /* Para posicionar el submenú */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Para que los enlaces ocupen todo el espacio del contenedor */
+}
+
+nav ul ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    background-color: #004F98;
+    top: 100%;
+    left: 0;
+    z-index: 1; /* Para que el submenú se muestre sobre otros elementos */
+}
+
+nav li:hover > ul {
+    display: block; /* Muestra el submenú al pasar el ratón por encima del elemento padre */
+}
+
+nav ul ul li {
+    display: block; /* Para que los elementos del submenú se muestren verticalmente */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    display: none; /* Oculta todas las secciones excepto la primera */
+}
+
+section:target {
+    display: block; /* Muestra la sección correspondiente al enlace */
+}
